@@ -2,3 +2,34 @@ https://github.com/zxlie/FeHelper/tree/master/apps/static/screenshot/crx
 https://github.com/xinghaix/download-manager
 
 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
+
+
+https://blog.csdn.net/anhongning123/article/details/107979534
+
+https://www.zhihu.com/question/30816866/answer/427750976
+有人求教程，其实也没啥好教的。对于熟悉linux的上面的一说估计已经知道怎么弄了，对于初学者来说，还是有点难度的，大体说一下吧。
+
+首先在windows 功能中激活WSL windows subsystem for Linux 和 hyper-V。 注意hyper-v 需要win10 pro版才有。请想办法升级到pro版。
+等上述功能安装完成后，下载ubuntu LTS的iso，我用的是16.04LTS，最近18也出了，选择你喜欢用版本，下载下来。
+在开始菜单中搜索hyper-v打开hyper-v控制器
+在hyper-v中打开虚拟交换机管理器，之前应该只有一个默认连接，按你的需求建立好网络连接，我一般会另外建立一个host only的网络，用于windows host与vm进行通讯。
+建好后，新建一个叫ubuntu的VM，设置好网络，内存硬盘等，如果可能的话，尽量给它16G以上的内存。在VM中安装好ubuntu和各种vm-tools，以及sshd，同时配置好host only 的网络，使用staticIP。关掉hyper-v管理器，之后我们不再需要它了。之后所有的操作都可以用powershell进行了。
+下载安装Xserver，我用的是vcXsvr，有人反应不够稳定，你可以选择你喜欢的，如cygwin/X等。 启动你的xserver并禁用host control。
+按windows+r，输入 bash，进入WSL，第一次运行会安装一点东西。启动完成后用vi修改一下你的 ~/.bashrc文件，加入DISPLAY的设置，如export DISPLAY=localhost:0.0， 试试能不能启动glxgears，并用xhost +禁用access control。
+现在可以ssh -X 到你的VM了。 在你的VM ssh中试着输入xterm，这时候你应该能看到一个xterm在你的windows桌面显示出来。这就表示环境配置完成了。
+
+
+操纵VM，可以直接在hyper-v中操作，但是更方便的方法是用powershell，按win+x a，打开一个powershell, 常用的命令列在下面，基本所有的操作都可以用powershell进行操作。
+
+
+
+Hyper-V
+​docs.microsoft.com/en-us/powershell/module/hyper-v/?view=win10-ps
+
+另外：
+
+为什么什么hyper-v而不用virtualbox或者vmware：
+
+其实我之前一直用VMWARE，但是VMWARE非常吃硬盘，disk IO非常多，后来用virtualbox用了好久，后来切到hyper-v的主要原因是因为hyper-v强大的powershell命令。比如我要启动我的VM，只要打一个 start-vm ubuntu就行了。完全是headless的，这是virtualbox做不到的。 还有一个很重要的特性是hyper-v其实是直接让VM运行在硬件上的，而virtualbox其实是需要host OS支撑的。这就造成hyper-v的性能其实是远远高于virtualbox的，但是记住，hyper-v中运行的linux是没有图形硬件加速的。
+
+也就是说，如果你需要经常使用linux desktop，那么你应该使用virtualbox，如果你像我一样所有的东西都可以命令行搞定，而且会使用XForwarding把窗口forward到windows上来，那么hyper-v其实是更合适的。 对于初学者来说，virtualbox更合适一点。
