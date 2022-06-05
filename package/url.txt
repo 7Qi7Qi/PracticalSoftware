@@ -1,7 +1,6 @@
 https://github.com/zxlie/FeHelper/tree/master/apps/static/screenshot/crx
 https://github.com/xinghaix/download-manager
-
-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
+https://github.com/FelisCatus/SwitchyOmega/releases
 
 https://github.com/anrgct/utools-saladict
 
