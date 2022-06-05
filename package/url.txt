@@ -6,6 +6,8 @@ https://github.com/anrgct/utools-saladict
 
 https://blog.csdn.net/anhongning123/article/details/107979534
 
+hyper-v 问题:https://blog.csdn.net/xiarimomocha/article/details/79232415
+
 https://www.zhihu.com/question/30816866/answer/427750976
 有人求教程，其实也没啥好教的。对于熟悉linux的上面的一说估计已经知道怎么弄了，对于初学者来说，还是有点难度的，大体说一下吧。
 
