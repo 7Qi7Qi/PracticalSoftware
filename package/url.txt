@@ -1,7 +1,7 @@
 https://github.com/zxlie/FeHelper/tree/master/apps/static/screenshot/crx
 https://github.com/xinghaix/download-manager
 https://github.com/FelisCatus/SwitchyOmega/releases
-
+https://github.com/gchq/CyberChef
 https://github.com/anrgct/utools-saladict
 
 https://blog.csdn.net/anhongning123/article/details/107979534
