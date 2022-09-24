@@ -25,8 +25,13 @@ yolo-token: pv1zbxeyTEyezeGH4SCv
     1. python2: python -m SimpleHTTPServer 10086
     2. python3: python -m http.server 10086
 9. File.separator
-
-
+10. wsl crontab -l
+11. -threads 5 -preset ultrafast 
+12. ObjectMapper#readValue
+13. torque
+14. Files.readAllBytes(file.toPath())
+15. jar打包 https://blog.csdn.net/tian830937/article/details/119580796
+16.
 
 +------+----------------------+--------------------------+-----------------+
 |序号  |服务名                |镜像tag                   |镜像ID        |
@@ -46,7 +51,11 @@ ToDo Project
 - jmockit hsqldb junit5
 - blog-docker https://vanblog.mereith.com/intro.html
 - simple spring https://solon.noear.org/
-
+- simple db https://competition.huaweicloud.com/information/1000041405/circumstance
+- axios request封装
+- vue-cli
+- https://stackoverflow.com/questions/309424/how-do-i-read-convert-an-inputstream-into-a-string-in-java
+- 
 
 视频
 - https://youtu.be/6Zt33FoCQ_A?t=1279
