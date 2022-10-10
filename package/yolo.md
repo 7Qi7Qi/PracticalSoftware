@@ -31,7 +31,8 @@ yolo-token: pv1zbxeyTEyezeGH4SCv
 13. torque
 14. Files.readAllBytes(file.toPath())
 15. jar打包 https://blog.csdn.net/tian830937/article/details/119580796
-16.
+16. Runtime.getRuntime(exec(cmd, null, workPath))
+17. Go To Test 快速创建Test类
 
 +------+----------------------+--------------------------+-----------------+
 |序号  |服务名                |镜像tag                   |镜像ID        |
@@ -55,7 +56,11 @@ ToDo Project
 - axios request封装
 - vue-cli
 - https://stackoverflow.com/questions/309424/how-do-i-read-convert-an-inputstream-into-a-string-in-java
-- 
+- http://c.biancheng.net/spring_boot/overview.html
+- https://panjiachen.github.io/awesome-bookmarks/
+- vue3 组件 https://fighting.tianyuhao.cn/
+- anytxt-tool https://github.com/echohw/anytxt-tool
+- ruoyi-vue https://github.com/YunaiV/ruoyi-vue-pro
 
 视频
 - https://youtu.be/6Zt33FoCQ_A?t=1279
