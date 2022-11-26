@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Task>
+    <Info>
+        <desc>$Info</desc>
+        <totalAmount>$Info</totalAmount>
+        <detail>
+            <key>KK</key>
+            #set($total=100)
+            #foreach($r in $Details)
+                #if($r.amount)
+                    #set($total = $total + $r.amount)
+                #end
+            #end
+            <value>$total</value>
+        </detail>
+        <entries>
+            #foreach($r in $Details)
+            <entry>
+                <amount>$Integer.parseInt($r.amount)</amount>
+            </entry>
+            #end
+        </entries>
+    </Info>
+
+</Task>
